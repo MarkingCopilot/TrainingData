@@ -2,7 +2,7 @@
 
 This repository provides step-by-step instructions for downloading and setting up three key datasets for math error detection research.
 
-## 📋 Quick Overview
+## Quick Overview
 
 | Dataset | Size | Language | Content | Use Case |
 |---------|------|----------|---------|----------|
@@ -10,7 +10,7 @@ This repository provides step-by-step instructions for downloading and setting u
 | **FERMAT** | 2,244 | English | Handwritten math + images | OCR + error detection |
 | **EGE Math** | 122 | Russian | EGE exam solutions + 3 image types | Cross-language detection |
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -24,7 +24,7 @@ pip install datasets requests pandas numpy matplotlib
 2. **Run the notebook**: Opens in Jupyter Lab/Notebook
 3. **Follow the step-by-step instructions** for each dataset
 
-## 📁 Dataset Details
+## Dataset Details
 
 ### 1. Math Misconceptions Dataset
 
@@ -106,7 +106,7 @@ pip install datasets requests pandas numpy matplotlib
 }
 ```
 
-## 📂 Output Directory Structure
+## Output Directory Structure
 
 After running the setup notebook, you'll have:
 
@@ -134,7 +134,7 @@ math_datasets/
 └── scripts/                     # Processing utilities
 ```
 
-## 🔧 Customization Options
+## Customization Options
 
 ### FERMAT Dataset Size
 
@@ -163,7 +163,7 @@ fermat_data = download_fermat_dataset(save_images=True)
 fermat_data = download_fermat_dataset(save_images=False)
 ```
 
-## 💡 Usage Examples
+## Usage Examples
 
 ### Loading Datasets
 
@@ -216,7 +216,7 @@ for image_file in os.listdir(fermat_images_dir):
         print(f"Extracted: {extracted_text}")
 ```
 
-## 🤝 Contributing
+## Contributing
 
 ### To MarkingCopilot/trainingData Repository
 
@@ -232,7 +232,7 @@ for image_file in os.listdir(fermat_images_dir):
 - Error detection benchmarks
 - Documentation improvements
 
-## 📊 Dataset Statistics
+## Dataset Statistics
 
 | Metric | Math Misconceptions | FERMAT | EGE Math |
 |--------|-------------------|---------|----------|
@@ -243,15 +243,15 @@ for image_file in os.listdir(fermat_images_dir):
 | **Topics** | Algebra | Mixed | EGE exam topics |
 | **Grade Levels** | Middle/High | 7th-12th | High school |
 
-## 🔍 Quality Checks
+## Quality Checks
 
 Each dataset includes:
-- ✅ **Data validation**: JSON structure verified
-- ✅ **Image verification**: All images saved and accessible
-- ✅ **Metadata consistency**: Complete dataset_info.json files
-- ✅ **Format standardization**: Consistent field naming
+- **Data validation**: JSON structure verified
+- **Image verification**: All images saved and accessible
+- **Metadata consistency**: Complete dataset_info.json files
+- **Format standardization**: Consistent field naming
 
-## 📚 Research Applications
+## Research Applications
 
 These datasets enable research in:
 - **Automated math grading**
@@ -260,7 +260,7 @@ These datasets enable research in:
 - **Cross-language error analysis**
 - **Educational technology development**
 
-## 🆘 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -275,13 +275,13 @@ These datasets enable research in:
 - Check the individual dataset sources for specific issues
 - Review the notebook cell outputs for detailed error messages
 
-## 📄 License Information
+## License Information
 
 - **Math Misconceptions**: Check source repository for license
 - **FERMAT**: CC-BY-4.0
 - **EGE Math**: Check HuggingFace dataset page for license
 
-## 🔗 Useful Links
+## Useful Links
 
 - [MarkingCopilot Research](https://github.com/MarkingCopilot/markingResearch)
 - [FERMAT Paper](https://arxiv.org/abs/2501.07244)
