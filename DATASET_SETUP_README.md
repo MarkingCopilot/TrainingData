@@ -6,7 +6,7 @@ This repository provides step-by-step instructions for downloading and setting u
 
 | Dataset | Size | Language | Content | Use Case |
 |---------|------|----------|---------|----------|
-| **Math Misconceptions** | 220 | English | Algebra misconceptions | Error detection testing |
+| **Math Misconceptions (MaE)** | 220 | English | 55 algebra misconceptions | Specific misconception testing |
 | **FERMAT** | 2,244 | English | Handwritten math + images | OCR + error detection |
 | **EGE Math** | 122 | Russian | EGE exam solutions + 3 image types | Cross-language detection |
 
@@ -26,25 +26,30 @@ pip install datasets requests pandas numpy matplotlib
 
 ## Dataset Details
 
-### 1. Math Misconceptions Dataset
+### 1. Math Misconceptions (MaE) Dataset
 
-- **Source**: [MarkingCopilot Research Benchmarks](https://github.com/MarkingCopilot/markingResearch/blob/main/docs/benchmarks.md)
-- **Size**: 220 examples
-- **Format**: JSON with structured Q&A pairs
-- **Content**: Common algebra misconceptions with incorrect/correct answer pairs
+- **Source**: [HuggingFace - nanote/algebra_misconceptions](https://huggingface.co/datasets/nanote/algebra_misconceptions)
+- **Repository**: [GitHub - nancyotero-projects/math-misconceptions](https://github.com/nancyotero-projects/math-misconceptions)
+- **Paper**: "A Benchmark for Math Misconceptions: Bridging Gaps in Middle School Algebra with AI-Supported Instruction" ([arXiv:2412.03765v1](https://arxiv.org/pdf/2412.03765v1))
+- **Size**: 220 examples covering 55 unique algebra misconceptions
+- **Format**: JSON with structured diagnostic examples
+- **Content**: Diagnostic examples designed by math learning researchers for middle school algebra
 - **Use Cases**: 
-  - Testing error detection algorithms
-  - Understanding common student mistakes
+  - Testing error detection algorithms on specific misconceptions
+  - Understanding common student mistakes in algebra
   - Training misconception identification models
+  - Educational research on middle school algebra
 
 **Example Structure**:
 ```json
 {
-  "Question": "Solve for x: 2x + 3 = 7",
-  "Incorrect Answer": "x = 5",
-  "Correct Answer": "x = 2", 
-  "Misconception": "Adding instead of subtracting when isolating variable",
-  "Topic": "Linear equations"
+  "question": "Solve for x: 2x + 3 = 7",
+  "incorrect_answer": "x = 5",
+  "correct_answer": "x = 2", 
+  "misconception": "Adding instead of subtracting when isolating variable",
+  "misconception_id": "ISOL_ADD_INSTEAD_SUB",
+  "topic": "Linear equations",
+  "example_number": 1
 }
 ```
 
